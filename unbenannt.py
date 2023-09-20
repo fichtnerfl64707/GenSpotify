@@ -38,7 +38,9 @@ headers = {
 
 response = requests.get(SPOTIFY_API_URL, headers=headers)
 
-data = json.loads(response)
+json_resp = response.json()
+
+data = json.loads(json_resp)
 
 # Den Namen "L.O.V.E." auslesen und ausgeben
 song_titel = data["item"]["name"]
