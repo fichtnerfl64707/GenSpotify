@@ -5,6 +5,8 @@ import requests
 
 CLIENT_ID = 'e1018b965d0348cf9ab9df8fcb5bf2c1'
 CLIENT_SECRET = '39197de95da642dcbfd830323392ed92'
+ACCESS_TOKEN_SERVER = 'BQAuCIh78WNH_dJ5DnYXfcQF07Tly2VbpXT_Cptblm1iH3xZkG6Eyd-pBxvQPlKtJZkjl-74vjW8nrDAVcIg_VQcOJqFnf1pVw1SBPR3Yx75UsS43ZJZGPqmJq5YBY6PHuyiUCVgXwYPJSiHlY7Ds6b-z6jN3yag5Gf3JlHlk3nxUaaKLrzoHCC7gn3oNZhnymjRxbF_vqn76RdX'
+
 
 AUTH_URL = 'https://accounts.spotify.com/api/token'
 
@@ -31,7 +33,7 @@ SPOTIFY_API_URL = "https://api.spotify.com/v1/me/player/currently-playing"
 #f'https://api.spotify.com/v1/tracks/{song_id}'
 
 headers = {
-    'Authorization': f'Bearer {access_token}',
+    'Authorization': f'Bearer {ACCESS_TOKEN_SERVER}',
 }
 
 #test
