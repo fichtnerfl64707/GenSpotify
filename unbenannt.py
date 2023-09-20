@@ -26,8 +26,8 @@ else:
     print("Fehler bei der Anmeldung bei Spotify.")
 
 # Verwende den Zugriffstoken, um Song-Informationen abzurufen (hier ein Dummy-Song)
-SPOTIFY_API_URL = 'https://api.spotify.com/v1/me/player/currently-playing'
 # song_id = '11dFghVXANMlKmJXsNCbNl'  # Ersetze SPOTIFY_SONG_ID durch die tatsächliche Song-ID
+SPOTIFY_API_URL = "https://api.spotify.com/v1/me/player/currently-playing"
 #f'https://api.spotify.com/v1/tracks/{song_id}'
 
 headers = {
@@ -41,7 +41,7 @@ response = requests.get(SPOTIFY_API_URL, headers=headers)
 
 current_track_info = response.json()
 # Hier kannst du auf verschiedene Informationen zugreifen, z.B. current_track_info['item']['name'] für den Song-Titel
-    print(current_track_info['item']['name'])
+    print(current_track_info)
 else:
     print("Fehler beim Abrufen des aktuellen Tracks.")
 
