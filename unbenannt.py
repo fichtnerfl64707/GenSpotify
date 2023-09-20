@@ -40,6 +40,14 @@ response = requests.get(SPOTIFY_API_URL, headers=headers)
 
 song_info = response.json()
 
+dateiname = "song_info.json"
+
+# Die JSON-Daten in eine Datei schreiben
+with open(dateiname, "w") as datei:
+    json.dump(song_info, datei)
+
+print(f'Die JSON-Daten wurden in der Datei "{dateiname}" gespeichert.')
+
 if 'album' in song_info and 'images' in song_info['album']:
     cover_url = song_info['album']['images'][0]['url']
     response = requests.get(cover_url)
