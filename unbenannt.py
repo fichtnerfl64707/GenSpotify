@@ -41,7 +41,7 @@ response = requests.get(SPOTIFY_API_URL, headers=headers)
 
 current_track_info = response.json()
 # Hier kannst du auf verschiedene Informationen zugreifen, z.B. current_track_info['item']['name'] für den Song-Titel
-    print(current_track_info)
+    print(current_track_info["item"]["name"])
 else:
     print("Fehler beim Abrufen des aktuellen Tracks.")
 
